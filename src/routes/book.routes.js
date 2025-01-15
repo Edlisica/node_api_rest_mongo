@@ -87,7 +87,7 @@ router.put("/:id", getBook, async (req, res) => {
     book.author = req.body.author || book.author;
     book.genre = req.body.genre || book.genre;
     book.publication_date =
-      req.body.publication_date || book.body.publication_date;
+      req.body.publication_date || book.publication_date;
 
     const updatedBook = await book.save();
     res.json(updatedBook);
